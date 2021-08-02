@@ -1,0 +1,60 @@
+<div class="{{lang 'ap-base-1.slideshow.on-off-section' }}  block-hero-1"> 
+    {{#block "hero"}} {{/block}}
+</div>
+<div class="container">
+    {{#if banners.top}}
+    <div class="banners clearfix" data-banner-location="top">
+        <div class="banner banner-top">
+            {{{limit banners.top 1}}}
+        </div>
+    </div>
+    {{/if}}
+    <div class="{{lang 'ap-base-1.bannertop.on-off-section' }} big-section-index section-banner"> 
+        {{> components/themes/sections/section section="pibags1"}}
+    </div>
+    {{{region name="home_below_featured_products"}}}
+    <div class="{{lang 'ap-base-1.new-products.on-off-section' }} big-section-index new-products">
+        {{> components/themes/sections/section section="new_products"}}
+    </div> 
+</div>
+    <div class="{{lang 'ap-base-1.bannermiddle.on-off-section' }} banner-mid"> 
+        {{> components/themes/sections/section section="pibags-mid1"}}
+    </div>
+    {{{region name="home_below_top_products"}}}
+    <div class="container">
+        <div class="{{lang 'ap-base-1.featured-products.on-off-section' }} big-section-index">
+            {{> components/themes/sections/section section="featured_products"}}
+        </div> 
+    </div>
+    <div class="testimonial big-section-index {{lang 'ap-base-1.testimonial.on-off-section' }}" style="background: url({{lang 'ap-base-1.testimonial.testimonial_bg'}}) center no-repeat">
+        <div class="container">
+            <div class="row">
+                <div class="testimonial col-md-12 col-sm-12 col-xs-12 col-sp-12 ">
+                    {{> components/themes/sections/section section="testimonial"}}
+                </div> 
+            </div>
+        </div>
+   </div>
+   <div class="{{lang 'ap-base-1.service.on-off-section' }}">
+        {{> components/themes/sections/section section="service_wrap"}}
+    </div> 
+   {{{region name="home_below_new_products"}}}
+    <div class="{{lang 'ap-base-1.blog-home.on-off-section' }} big-section-index">
+        <div class="container">
+            <div class="row">
+                    {{> components/themes/sections/section section="blog_home" columns=2}}
+            </div>
+        </div>
+    </div>
+    <div class="{{lang 'ap-base-1.brandlist.on-off-section' }} index-brand">
+        <div class="container">
+                {{> components/themes/sections/section section="brand_list"}}
+        </div>
+    </div> 
+    {{#if banners.bottom}}
+        <div class="banner-bottom" data-banner-location="bottom">
+            <div class="banner banner-bottom">
+             {{{limit banners.bottom 1}}}
+            </div>
+        </div>
+    {{/if}}

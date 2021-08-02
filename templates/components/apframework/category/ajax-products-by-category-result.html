@@ -1,0 +1,10 @@
+<div class="Apframework-productsByCategory-products">
+	<ul class="Product-blocks productGrid productGrid--maxCol2">
+		{{#each (limit category.products 8)}}
+		<li class="product">
+			{{>components/products/card show_compare=../settings show_rating=../settings.show_product_rating setting_show = ../settings
+			theme_settings=../theme_settings customer=../customer}}
+		</li>
+		{{/each}}
+	</ul>
+</div>

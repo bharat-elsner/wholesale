@@ -1,0 +1,60 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="page">
+{{#if page.title '===' 'Home 6'}}
+<link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+<script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+{{/if}}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {{#if page.sub_pages}}
+    <nav class="navBar navBar--sub">
+        <ul class="navBar-section account-navigation">
+        {{#each page.sub_pages}}
+            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+        {{/each}}
+        </ul>
+    </nav>
+    {{/if}}
+    {{{region name="page_builder_content"}}}
+    <div class="page-content page-content--centered">
+        {{#replace '%%Syndicate%%' page.content}}
+            {{> components/page/rss_feed}}
+        {{else}}
+            {{{page.content}}}
+        {{/replace}}
+    </div>
+
+    {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+                <li>
+                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                    <p>{{content}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+{{#if page.title '===' 'Home 6'}}
+<script type="text/javascript">
+    new WOW().init();
+    $(window).load(function () {
+        setTimeout(function() {
+            $('.grid').isotope({
+              itemSelector: '.grid-item',
+              percentPosition: true,
+              masonry: {
+                // use outer width of grid-sizer for columnWidth
+                columnWidth: '.grid-sizer'
+              }
+            }) 
+        }, 700);
+      });
+</script>
+{{/if}}    
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

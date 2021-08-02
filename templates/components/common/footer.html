@@ -1,0 +1,159 @@
+<<footer class="footer" role="contentinfo">
+    <div class="container">
+       <section class="footer-info clearfix">
+          {{#if (lang 'footer.on-off-block-footer-1') '==' 'on'}}
+          <article class="col-md-4 col-sm-4 col-xs-12">
+             <div class="contact-info">
+                <h5 class="footer-info-heading">{{lang 'footer.title-footer-1'}}</h5>
+                <ul class="contact-list-info">
+                   {{#if (lang 'footer.content.address') '!=' ' '}}
+                   <li><i class="icon-location-pin icons"></i><span>{{lang 'footer.content.address'}}</span></li>
+                   {{/if}}
+                   {{#if (lang 'footer.content.phone') '!=' ' '}}
+                   <li><i class="icon-earphones-alt icons"></i><span>{{lang 'footer.content.phone'}}</span></li>
+                   {{/if}}
+                   {{#if (lang 'footer.content.email') '!=' ' '}}
+                   <li><i class="icon-font icon-envelope icons"></i><span>{{lang 'footer.content.email'}}</span></li>
+                   {{/if}}                                                                                                                      
+                </ul>
+             </div>
+          </article>
+          {{/if}}
+          {{#if (lang 'footer.on-off-block-footer-2') '==' 'on'}}
+          <article class="col-md-4 col-sm-4 col-xs-12" data-section-type="storeInfo">
+             <h5 class="footer-info-heading">
+                {{lang 'footer.title-footer-2'}}
+             </h5>
+             <address>{{lang 'footer.content.social-description'}}</address>
+             {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
+             <div class="footer-info-col--social
+                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
+                data-section-type="footer-webPages">
+                {{> components/common/social-links}}
+             </div>
+             {{/if}}
+          </article>
+          {{/if}}
+          {{#if (lang 'newsletter.on-off-newsletter') '==' 'on'}}
+          <article class="newsletter col-md-4 col-sm-4 col-xs-12" data-section-type="storeInfo">                  
+             {{#if settings.show_newsletter_box}}
+             {{> components/common/subscription-form}}
+             {{/if}} 
+          </article>
+          {{/if}}
+          {{#if (lang 'footer.on-off-block-footer-3') '==' 'on'}}
+          <article class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+             <div class="contact-info">
+                <h5 class="footer-info-heading">{{lang 'footer.title-footer-3'}}</h5>
+                <ul class="contact-list-info">
+                   {{#if (lang 'footer.content.text-1') '!=' ' '}}
+                   <li><i class="icon-location-pin icons"></i><span>{{lang 'footer.content.text-1'}}</span></li>
+                   {{/if}}
+                   {{#if (lang 'footer.content.text-2') '!=' ' '}}
+                   <li><i class="icon-earphones-alt icons"></i><span>{{lang 'footer.content.text-2'}}</span></li>
+                   {{/if}}                                                                                                                        
+                </ul>
+             </div>
+          </article>
+          {{/if}}
+          {{#if (lang 'footer.on-off-block-footer-4') '==' 'on'}}
+          <article class="col-lg-2 col-md-2 col-sm-4 col-xs-12" data-section-type="footer-webPages">
+             <h5 class="footer-info-heading">{{lang 'footer.title-footer-4'}}</h5>
+             <div class="footer-nav-content">
+                <ul class="footer-info-list">
+                   {{#if (lang 'footer.links.col1_url1') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col1_url1'}}">{{lang 'footer.links.col1_title1'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col1_url2') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col1_url2'}}">{{lang 'footer.links.col1_title2'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col1_url3') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col1_url3'}}">{{lang 'footer.links.col1_title3'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col1_url4') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col1_url4'}}">{{lang 'footer.links.col1_title4'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col1_url5') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col1_url5'}}">{{lang 'footer.links.col1_title5'}}</a></li>
+                   {{/if}}
+                </ul>
+             </div>
+          </article>
+          {{/if}}
+          {{#if (lang 'footer.on-off-block-footer-5') '==' 'on'}}
+          <article class="col-lg-2 col-md-2 col-sm-4 col-xs-12" data-section-type="footer-webPages">
+             <h5 class="footer-info-heading">{{lang 'footer.title-footer-5'}}</h5>
+             <div class="footer-nav-content">
+                <ul class="footer-info-list">
+                   {{#if (lang 'footer.links.col2_url1') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col2_url1'}}">{{lang 'footer.links.col2_title1'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col2_url2') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col2_url2'}}">{{lang 'footer.links.col2_title2'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col2_url3') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col2_url3'}}">{{lang 'footer.links.col2_title3'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col2_url4') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col2_url4'}}">{{lang 'footer.links.col2_title4'}}</a></li>
+                   {{/if}}
+                   {{#if (lang 'footer.links.col2_url5') '!=' ' '}}
+                   <li><a href="{{lang 'footer.links.col2_url5'}}">{{lang 'footer.links.col2_title5'}}</a></li>
+                   {{/if}}
+                </ul>
+             </div>
+          </article>
+          {{/if}}
+          {{#if (lang 'footer.on-off-block-footer-6') '==' 'on'}}
+          <article class="col-lg-2 col-md-2 col-sm-4 col-xs-12" data-section-type="footer-webPages">
+             <h5 class="footer-info-heading">{{lang 'footer.title-footer-6'}}</h5>
+             <div class="footer-nav-content">
+              <ul class="footer-info-list">
+                {{#if (lang 'footer.links.col3_url1') '!=' ' '}}
+                <li><a href="{{lang 'footer.links.col3_url1'}}">{{lang 'footer.links.col3_title1'}}</a></li>
+                {{/if}}
+                {{#if (lang 'footer.links.col3_url2') '!=' ' '}}
+                <li><a href="{{lang 'footer.links.col3_url2'}}">{{lang 'footer.links.col3_title2'}}</a></li>
+                {{/if}}
+                {{#if (lang 'footer.links.col3_url3') '!=' ' '}}
+                <li><a href="{{lang 'footer.links.col3_url3'}}">{{lang 'footer.links.col3_title3'}}</a></li>
+                {{/if}}
+                {{#if (lang 'footer.links.col3_url4') '!=' ' '}}
+                <li><a href="{{lang 'footer.links.col3_url4'}}">{{lang 'footer.links.col3_title4'}}</a></li>
+                {{/if}}
+                {{#if (lang 'footer.links.col3_url5') '!=' ' '}}
+                <li><a href="{{lang 'footer.links.col3_url5'}}">{{lang 'footer.links.col3_title5'}}</a></li>
+                {{/if}}
+             </ul>
+             </div>
+          </article>
+          {{/if}}
+          {{#if (lang 'footer.on-off-block-footer-7') '==' 'on'}}
+          <article class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+               <h5 class="footer-info-heading">{{lang 'footer.title-footer-7'}}</h5>
+               {{> components/themes/instagram/grid }}
+         </article>
+         {{/if}}
+       </section>
+    </div>
+    <div class="footer-bottom">
+       <div class="container">
+          <div class="flex-box">
+             {{#if theme_settings.geotrust_ssl_common_name}}
+             <div class="footer-geotrust-ssl-seal">
+                {{> components/common/geotrust-ssl-seal}}
+             </div>
+             {{/if}}
+             <div class="footer-copyright">
+                {{#if theme_settings.show_powered_by}}
+                <span class="powered-by">Powered by <a href="https://www.bigcommerce.com/" rel="nofollow">BigCommerce</a></span>
+                {{/if}}
+                {{#if theme_settings.show_copyright_footer}}
+                <span class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </span>
+                {{/if}}  
+             </div>
+             {{> components/common/payment-icons}}
+          </div>
+       </div>
+    </div>
+ </footer>

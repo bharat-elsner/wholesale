@@ -1,0 +1,32 @@
+{{#if page.title '===' 'Home 6'}}
+<div class="body home-6 {{#if template_file '===''pages/home' }}nomr-bt{{/if}} {{#if theme_settings.floatheader}}stop-float-body{{/if}}">
+   <div class="apframe-main">
+        {{#block "page"}} {{/block}}
+    </div>
+     {{> components/common/modal}}
+</div>
+{{else}}
+<div class="body {{#if template_file '===''pages/home' }}nomr-bt{{/if}} {{#if theme_settings.floatheader}}stop-float-body{{/if}}">
+    <div class="apframe-main">
+  	  {{#if template_file '!=''pages/home' }} 
+  	  {{#if template_file '===' 'pages/category'}}
+	<div class="container-fluid">
+		<img class="img-breadcrumbs" src="{{lang 'imageNoCategory.imgNoCategory'}}">
+		{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+	</div>
+	{{else}}
+	<div class="container-fluid">
+		<img class="img-breadcrumbs" src="{{lang 'imageNoCategory.imgNoCategory'}}">
+		{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}		
+	</div>	
+	{{/if}}
+	    <div class="container">
+	    	 {{#block "page"}} {{/block}}
+	    </div>
+	    {{else}}
+	     {{#block "page"}} {{/block}}
+  	 {{/if}}
+    </div>
+    {{> components/common/modal}}
+</div>
+{{/if}}
